@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background: #efebeb;
+}
+i,
+svg {
+  pointer-events: none;
+}
+.kick-pad,
+.snare-pad,
+.hihat-pad {
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+}
+.kick-pad {
+  background: #f44336;
+}
+.snare-pad {
+  background: #ff9800;
+}
+.hihat-pad {
+  background: #4caf50;
+}
+.play,
+.hihat-pad,
+.snare-pad,
+.kick-pad {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+.kick,
+.snare,
+.hihat {
+  display: flex;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.play {
+  background: #b34fb1;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  justify-content: center;
+}
+.kick-pad.active {
+  background: #36f478;
+}
+.snare-pad.active {
+  background: #b778ff;
+}
+.hihat-pad.active {
+  background: #f47a78;
+}
+@keyframes playTrack {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
